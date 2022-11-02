@@ -12,7 +12,6 @@ public class worker {
     private List<hourContract> contracts = new ArrayList<>();
 
     public worker() {
-
     }
 
     public worker(String name, workerLevel level, Double baseSalary, departament departament) {
@@ -70,11 +69,11 @@ public class worker {
         double sum = baseSalary;
         Calendar cal = Calendar.getInstance();
 
-        for(hourContract c : contracts) {
+        for (hourContract c : contracts) {
             cal.setTime(c.getDate());
             int c_year = cal.get(Calendar.YEAR);
-            int c_month = cal.get(Calendar.MONTH);
-            if() {
+            int c_month = 1 + cal.get(Calendar.MONTH);
+            if (year == c_year && month == c_month) {
                 sum += c.totalValue();
             }
         }

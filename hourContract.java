@@ -1,8 +1,9 @@
-import java.text.SimpleDateFormat;
+
+import java.util.Date;
 
 public class hourContract {
 
-    private SimpleDateFormat date;
+    private Date date;
     private Double valuePerHour;
     private Integer hours;
 
@@ -10,13 +11,13 @@ public class hourContract {
 
     }
 
-    public hourContract(SimpleDateFormat date, Double valuePerHour, Integer hours) {
+    public hourContract(Date date, Double valuePerHour, Integer hours) {
         this.date = date;
         this.valuePerHour = valuePerHour;
         this.hours = hours;
     }
 
-    public SimpleDateFormat getDate() {
+    public Date getDate() {
         return date;
     }
 
@@ -28,7 +29,7 @@ public class hourContract {
         return valuePerHour;
     }
 
-    public void setDate(SimpleDateFormat date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
