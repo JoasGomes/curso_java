@@ -20,7 +20,7 @@ public class aula22 {
         System.out.print("Base salary: ");
         double baseSalary = sc.nextDouble();
 
-        worker worker = new worker(workerName, workerLevel(workerLevel), baseSalary,
+        worker worker = new worker(workerName, workerLevel.valueOf(workerLevel), baseSalary,
                 new departament(departmentName));
 
         System.out.print("how many contracts to this worker? ");
