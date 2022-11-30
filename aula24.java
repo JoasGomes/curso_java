@@ -4,6 +4,18 @@ public class aula24 {
         account2 acc = new account2(1000, "joas", 0.0);
         businessAccount bacc = new businessAccount(1001, "vitor", 0.0, 500.0);
 
+        account2 acc6 = new account2(100, "alex", 1000.0);
+        acc6.withdraw(200.0);
+        System.out.println(acc6.getBalance());
+
+        account2 acc7 = new savingAccount(10000, "junior", 1000.0, 0.01);
+        acc7.withdraw(200.0);
+        System.out.println(acc7.getBalance());
+
+        account2 acc8 = new businessAccount(1100, "bruno", 1000.0, 500.0);
+        acc8.withdraw(200.0);
+        System.out.println(acc8.getBalance());
+
         // upcasting
 
         account2 acc1 = bacc;
