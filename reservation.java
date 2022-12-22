@@ -11,6 +11,10 @@ public class reservation {
     private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
 
     public reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+        if (!checkOut.after(checkIn)) {
+            throw new IllegalArgumentException("Error in reservation!!");
+        }
+
         this.roomNumber = roomNumber;
         this.checkIn = checkIn;
         this.checkOut = checkOut;
@@ -38,6 +42,18 @@ public class reservation {
     }
 
     public void updateDates(Date checkIn, Date checkOut) {
+
+        // Melhor solução com tratamento de erros
+        Date now = new Date();
+        if (checkIn.before(now) || checkOut.before(now)) {
+            // throws -> propaga a exceção em vez de trata-la
+            // throw -> lança a exceção / "corta" o método
+            throw new IllegalArgumentException("Error in reservation!!");
+        }
+        if (!checkOut.after(checkIn)) {
+            throw new IllegalArgumentException("Error in reservation!!");
+        }
+
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
